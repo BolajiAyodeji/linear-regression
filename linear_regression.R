@@ -3,10 +3,10 @@
 # Set path to project directory
 setwd("~/Tunnel/R Projects/Linear regression")
 
-# Read csv data filr
+# Read csv data file in project directory
 rawData=read.csv("linear.csv", header=T)
 
-# Show first n entries of data.frame, notice NA values
+# Show first n entries of data.frame and notice NA values
 head(rawData, 10)
 
 linModel <- lm(y~x, data = rawData)
@@ -20,7 +20,7 @@ linModel$na.action
 # Show coefficients of model
 linModel$coefficients
 
-# Predicting New Value based on our model
+# Predict New Value based on the model
 predict(linModel, data.frame(x = 3))
 
 plot(y ~ x, data = rawData,
